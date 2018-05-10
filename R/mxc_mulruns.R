@@ -26,7 +26,7 @@
 mxc_mulruns <- function(home, filename) {
 
   #Set the Working directory to input folder.
-  setwd(paste(home, filename, "/", sep = ""))
+  setwd(paste(home, filename, sep = ""))
 
   #each of these runs should be in the folder, and should be named mxc run_X.csv where X
   #is the run number.
