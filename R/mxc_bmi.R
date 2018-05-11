@@ -198,17 +198,17 @@ mxc_bmi <- function(home, filename) {
     runN["delta_perc"] <- runN$perc_E - runN$perc_S
 
     #Make the subrun files for each age and gender combo..
-    run_f <- filter(runN, gender == "FEMALE")
-    run_m <- filter(runN, gender ==   "MALE")
+    run_f <- dplyr::filter(runN, gender == "FEMALE")
+    run_m <- dplyr::filter(runN, gender ==   "MALE")
 
-    run_f6_9 <- filter(runN, gender == "FEMALE", age < 10)
-    run_m6_9 <- filter(runN, gender ==   "MALE", age < 10)
+    run_f6_9 <- dplyr::filter(runN, gender == "FEMALE", age < 10)
+    run_m6_9 <- dplyr::filter(runN, gender ==   "MALE", age < 10)
 
-    run_f10_14 <- filter(runN, gender == "FEMALE", age < 15, age >= 10)
-    run_m10_14 <- filter(runN, gender ==   "MALE", age < 15, age >= 10)
+    run_f10_14 <- dplyr::filter(runN, gender == "FEMALE", age < 15, age >= 10)
+    run_m10_14 <- dplyr::filter(runN, gender ==   "MALE", age < 15, age >= 10)
 
-    run_f15_18 <- filter(runN, gender == "FEMALE", age >= 15)
-    run_m15_18 <- filter(runN, gender ==   "MALE", age >= 15)
+    run_f15_18 <- dplyr::filter(runN, gender == "FEMALE", age >= 15)
+    run_m15_18 <- dplyr::filter(runN, gender ==   "MALE", age >= 15)
 
     #Make the run dataframes into a list.
     runs_list <- list(runN, run_f, run_m, run_f6_9, run_m6_9, run_f10_14, run_m10_14, run_f15_18, run_m15_18)
